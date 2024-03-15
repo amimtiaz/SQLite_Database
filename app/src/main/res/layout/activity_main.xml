@@ -7,13 +7,75 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/edName"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name"
+        android:padding="8dp"
+        android:background="@drawable/edittext_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edMobile"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="text"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edMobile">
+
+        <Button
+            android:id="@+id/showBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="0.5"
+            android:text="Show"
+            android:background="@drawable/dailog_bg"
+            app:backgroundTint="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/edMobile"
+            app:layout_constraintStart_toStartOf="@+id/edMobile"
+            app:layout_constraintTop_toBottomOf="@+id/edMobile" />
+
+        <Button
+            android:id="@+id/insertBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/dailog_bg"
+            app:backgroundTint="@color/black"
+            android:text="Insert"
+            app:layout_constraintEnd_toEndOf="@+id/edMobile"
+            app:layout_constraintStart_toStartOf="@+id/edMobile"
+            app:layout_constraintTop_toBottomOf="@+id/edMobile" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
