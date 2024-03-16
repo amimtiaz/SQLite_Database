@@ -42,11 +42,11 @@ Android has features available to handle changing database schemas, which mostly
 We define a *DBManager* class to perform all database CRUD(Create, Read, Update and Delete) operations.
 
 <hr>
-  ```
-  Cursor cursor = dbHelper.searchDataByName(""+searchBarText);
+```
+Cursor cursor = dbHelper.searchDataByName(""+searchBarText);
                 binding.tvDisplay.setText("Total row: " + cursor.getCount());
   while (cursor.moveToNext()){
                         int id = cursor.getInt(0);
                         String name = cursor.getString(1);
-                        String mobile = cursor.getString(2);                  
-  ```
+                        String mobile = cursor.getString(2);   
+```
