@@ -43,15 +43,10 @@ We define a *DBManager* class to perform all database CRUD(Create, Read, Update 
 
 <hr>
   ```
-
-Cursor cursor = dbHelper.searchDataByName(""+searchBarText);
+  Cursor cursor = dbHelper.searchDataByName(""+searchBarText);
                 binding.tvDisplay.setText("Total row: " + cursor.getCount());
-  
   while (cursor.moveToNext()){
                         int id = cursor.getInt(0);
                         String name = cursor.getString(1);
-                        String mobile = cursor.getString(2);
-
-                        binding.tvDisplay.append("\nID: "+id+ " Name: " + name + " Mobile: " + mobile);
-                    }
+                        String mobile = cursor.getString(2);                  
   ```
