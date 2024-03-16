@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SQLiteDatabase"
-        tools:targetApi="31">
+        tools:targetApi="28">
         <activity
             android:name=".ShowResult"
             android:exported="false" />

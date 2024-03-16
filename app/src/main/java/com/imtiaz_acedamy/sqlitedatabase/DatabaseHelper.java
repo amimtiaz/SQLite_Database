@@ -52,4 +52,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public Cursor searchDataById(int id) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from my_table where id like '%" + id + "%' ", null);
+        return cursor;
+
+    }
+
+
+    public Cursor searchDataByName(String name) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from my_table where name like '%" + name + "%' ", null);
+        return cursor;
+
+    }
+
 }
