@@ -40,3 +40,18 @@ Android has features available to handle changing database schemas, which mostly
 * **onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion):** It’s called when the schema version we need does not match the schema version of the database, It passes us a SQLiteDatabase object and the old and new version numbers. Hence we can figure out the best way to convert the database from the old schema to the new one.
 
 We define a *DBManager* class to perform all database CRUD(Create, Read, Update and Delete) operations.
+
+<hr>
+  ```
+
+Cursor cursor = dbHelper.searchDataByName(""+searchBarText);
+                binding.tvDisplay.setText("Total row: " + cursor.getCount());
+  
+  while (cursor.moveToNext()){
+                        int id = cursor.getInt(0);
+                        String name = cursor.getString(1);
+                        String mobile = cursor.getString(2);
+
+                        binding.tvDisplay.append("\nID: "+id+ " Name: " + name + " Mobile: " + mobile);
+                    }
+  ```
